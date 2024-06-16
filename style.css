@@ -355,3 +355,25 @@ body.dark .home .text{
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* logo switch */
+
+
+
+body.dark {
+    #logo {
+        display: none;
+      }
+    #logo-dark {
+      display: block;
+    }
+  }  
+
+  body {
+    #logo {
+        display: block;
+      }
+    #logo-dark {
+      display: none;
+    }
+  }
