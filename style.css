@@ -11,10 +11,11 @@
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #ff0000;
+    --primary-color: #3399ff34;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #312222;
+    --compliment-color: #3399ff;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -41,6 +42,7 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --compliment-color: #ffffff;
 }
 
 /* ===== Sidebar ===== */
@@ -136,7 +138,7 @@ header .image-text .profession{
     border-radius: 6px;
 }
 
-.sidebar header .toggle{
+.sidebar header .toggle {
     position: absolute;
     top: 50%;
     right: -25px;
@@ -158,7 +160,7 @@ body.dark .sidebar header .toggle{
     color: var(--text-color);
 }
 
-.sidebar.close .toggle{
+.sidebar.close .toggle {
     transform: translateY(-50%) rotate(0deg);
 }
 
@@ -210,7 +212,7 @@ body.dark .sidebar li a:hover .text{
     color: var(--text-color);
 }
 
-.sidebar .menu-bar{
+.sidebar .menu-bar {
     height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
@@ -283,12 +285,13 @@ body.dark .switch::before{
 }
 
 .home{
-    position: absolute;
-    top: 0;
-    top: 0;
-    left: 250px;
-    height: 100vh;
-    width: calc(100% - 250px);
+    position: relative;
+    top: 20px;
+    width: 5%;
+    height: 5%;
+    text-align: center;
+    left: 20px;
+    /*width: calc(100% - 250px);*/
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
@@ -299,8 +302,8 @@ body.dark .switch::before{
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .home{
-    left: 78px;
+.sidebar.close ~ /*.home*/{
+    left: 70px;
     height: 100vh;
     width: calc(100% - 78px);
 }
@@ -311,6 +314,44 @@ body.dark .home .text{
 
 
 
-                /*customization*/
+ /*Typing Effect*/
 
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');                
 
+.kalam-light {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+    
+  }
+  
+#text-container {
+  font-size: 50px;
+  position: absolute;
+  text-align: left;
+  left:32%;
+  font-family:'Kalam' , 'Northwell';
+  color:var(--compliment-color);
+}
+
+#text-container::after {
+  content: "";
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
