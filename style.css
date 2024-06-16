@@ -11,10 +11,10 @@
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #141c94;
+    --primary-color: #ff0000;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
-    --text-color: #707070;
+    --text-color: #312222;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -203,7 +203,7 @@ body.dark .sidebar header .toggle{
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
-    color: var(--sidebar-color);
+    color: black;
 }
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
